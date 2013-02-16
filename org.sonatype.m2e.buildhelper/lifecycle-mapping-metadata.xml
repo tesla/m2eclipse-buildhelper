@@ -13,6 +13,8 @@
           <goal>add-test-resource</goal>
           <goal>maven-version</goal>
           <goal>parse-version</goal>
+          <goal>regex-property</goal>
+          <goal>timestamp-property</goal>
         </goals>
       </pluginExecutionFilter>
       <action>
