@@ -13,6 +13,7 @@
           <goal>add-test-resource</goal>
           <goal>maven-version</goal>
           <goal>parse-version</goal>
+          <goal>released-version</goal>
         </goals>
       </pluginExecutionFilter>
       <action>
