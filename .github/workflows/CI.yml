@@ -44,4 +44,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            org.sonatype.m2e.modello.repository/target/flat-repository/*
+            org.sonatype.m2e.buildhelper.repository/target/flat-repository/*
