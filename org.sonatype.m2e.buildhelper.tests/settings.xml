@@ -1,5 +1,5 @@
 <settings>
-  <localRepository>target/localrepo</localRepository>
+  <localRepository>target/remoterepo</localRepository>
 
   <profiles>
     <profile>
@@ -24,6 +24,6 @@
   </profiles>
 
   <activeProfiles>
-    <activeProfile>test</activeProfile>
+    <!-- <activeProfile>test</activeProfile> -->
   </activeProfiles>
 </settings>

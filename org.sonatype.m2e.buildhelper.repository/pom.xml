@@ -6,10 +6,50 @@
   <parent>
     <groupId>org.sonatype.m2e.extras</groupId>
     <artifactId>org.sonatype.m2e.buildhelper.parent</artifactId>
-    <version>0.15.0-SNAPSHOT</version>
+    <version>0.15.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>org.sonatype.m2e.buildhelper.repository</artifactId>
   <packaging>eclipse-repository</packaging>
 
+  <properties>
+    <skipFlatRepo>false</skipFlatRepo>
+    </properties>
+    <profiles>
+       <profile>
+           <id>skip-flat-repo</id>
+         <activation><os><family>windows</family></os></activation>
+         <properties>
+           <skipFlatRepo>true</skipFlatRepo>
+         </properties>
+       </profile>
+      <profile>
+        <id>flat-repo</id>
+        <build>
+          <plugins>
+            <plugin>
+              <groupId>dev.jbang</groupId>
+              <artifactId>jbang-maven-plugin</artifactId>
+              <version>0.0.7</version>
+              <executions>
+                <execution>
+                  <id>run</id>
+                  <phase>package</phase>
+                  <goals>
+                    <goal>run</goal>
+                  </goals>
+                  <configuration>
+                    <skip>${skipFlatRepo}</skip>
+                    <script>${project.basedir}/src/jbang/java/repoflattener.java</script>
+                    <args>
+                      <arg>${project.basedir}</arg>
+                    </args>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+        </build>
+      </profile>
+    </profiles>
 </project>

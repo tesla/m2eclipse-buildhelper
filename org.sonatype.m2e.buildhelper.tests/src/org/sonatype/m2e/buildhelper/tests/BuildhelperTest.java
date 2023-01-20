@@ -1,5 +1,10 @@
 package org.sonatype.m2e.buildhelper.tests;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
 import java.io.File;
 
 import org.eclipse.core.resources.IProject;
@@ -10,11 +15,13 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.m2e.core.project.ResolverConfiguration;
 import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 import org.eclipse.m2e.tests.common.ClasspathHelpers;
+import org.junit.Test;
 
 @SuppressWarnings( "restriction" )
 public class BuildhelperTest
     extends AbstractMavenProjectTestCase
 {
+    @Test
     public void test_p001_simple()
         throws Exception
     {
@@ -30,6 +37,7 @@ public class BuildhelperTest
         }, classpath );
     }
 
+    @Test
     public void test_p002_resources()
         throws Exception
     {
