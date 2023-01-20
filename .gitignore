@@ -4,3 +4,6 @@ target/
 bin/
 .project
 .classpath
+**/_remote.repositories
+**/m2e-lastUpdated.properties
+**/*.jar.sha1
