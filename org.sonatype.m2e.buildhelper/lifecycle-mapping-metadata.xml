@@ -5,7 +5,8 @@
       <pluginExecutionFilter>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <versionRange>[1.0,)</versionRange>
+        <versionRange>[1.0,3.0.0)</versionRange>
+        <!-- later versions (3.0+) embed a lifecycle mapping -->
         <goals>
           <goal>add-source</goal>
           <goal>add-test-source</goal>
